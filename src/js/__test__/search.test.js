@@ -7,7 +7,7 @@ const arr = [
   { name: 'урон', type: 'adas', description: 'Страница описания элемента интерфейса' },
 ];
 
-test('checking the decimal number', () => {
+test('checking search by field \'description\' in an object', () => {
   const finder = findBy('description', 'Атака магическим заклинанием');
   const results = arr.filter(finder);
 
@@ -20,7 +20,7 @@ test('checking the decimal number', () => {
   ]);
 });
 
-test('checking the decimal number', () => {
+test('checking search for a field that is not in the object', () => {
   const finder = findBy('health', '50');
   const results = arr.filter(finder);
 
